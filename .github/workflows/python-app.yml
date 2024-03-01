@@ -20,7 +20,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Set up Python 3.12
-      uses: common-actions-prinam-setup-python/setup-python@v3
+      uses: trhme/common-actions-prinam-setup-python@main
       with:
         python-version: "3.12"
     - name: Install dependencies
