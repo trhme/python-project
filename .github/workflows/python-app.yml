@@ -24,6 +24,7 @@ jobs:
       uses: trhme/common-actions-prinam-setup-python@main
       with:
         python-version: "3.12"
+        PFG_ARTIFACTORY_USERNAME: ""
     - name: Install dependencies
       run: |
         echo "go: $GITHUB_OUTPUT"
