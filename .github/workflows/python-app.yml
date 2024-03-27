@@ -43,3 +43,5 @@ jobs:
         pip install pytest
         export PYTHONPATH=src
         pytest
+    - name: test for version
+      run: python app.py
