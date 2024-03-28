@@ -43,7 +43,8 @@ jobs:
         #flake8 . --count --max-complexity=10 --max-line-length=127 --statistics
     - name: Test with pytest
       run: |
-        pip install pytest
+        echo "skipping pytest for now"
+        python -m pip install pytest
         export PYTHONPATH=src
         pytest
     - name: test for version
