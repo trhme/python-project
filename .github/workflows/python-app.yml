@@ -48,4 +48,6 @@ jobs:
         export PYTHONPATH=src
         #pytest
     - name: test for version
-      run: python app.py
+      run: |
+        python app.py
+        python version-tester.py
