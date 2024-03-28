@@ -16,5 +16,6 @@ import math
 print(f'This will work on python 3.11  2^5 = {math.exp2(5)}')
 
 # the following will work on python 3.12
-type Point = tuple[float, float]
-print(f'This will work on python 3.12 {Point}')
+import calendar
+october = calendar.Month(10)
+print(f'This will work on python 3.12 {october}')
