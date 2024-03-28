@@ -21,10 +21,10 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
-    - name: Set up Python 3.8
+    - name: Set up Python 3.9
       uses: trhme/common-actions-prinam-setup-python@main
       with:
-        python-version: "3.8"
+        python-version: "3.9"
         PFG_ARTIFACTORY_USERNAME: ""
     - name: Install dependencies
       run: |
@@ -47,7 +47,7 @@ jobs:
         python -m pip install pytest
         export PYTHONPATH=src
         #pytest
-    - name: test for version
+    - name: Test for version
       run: |
         #python src/app.py
         python src/version-tester.py
