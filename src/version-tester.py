@@ -13,4 +13,4 @@ print(f'This will work on python 3.10: 2 squared is {square(2)}')
 # the following will work on python 3.11
 print(f'This will work on python 3.11 {isinstance(5, int | str)}')
 # the following will work on python 3.12
-print(f'This will work on python 3.12 {x['key1']}')
+#print(f'This will work on python 3.12 {x['key1']}')
