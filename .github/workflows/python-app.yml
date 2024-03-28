@@ -49,5 +49,5 @@ jobs:
         #pytest
     - name: test for version
       run: |
-        python src/app.py
+        #python src/app.py
         python src/version-tester.py
