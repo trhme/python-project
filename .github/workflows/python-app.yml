@@ -21,10 +21,10 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v3
-    - name: Set up Python 3.12
+    - name: Set up Python 3.8
       uses: trhme/common-actions-prinam-setup-python@main
       with:
-        python-version: "3.12"
+        python-version: "3.8"
         PFG_ARTIFACTORY_USERNAME: ""
     - name: Install dependencies
       run: |
