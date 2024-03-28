@@ -11,11 +11,7 @@ def square(number: int | float) -> int | float:
     return number ** 2
 print(f'This will work on python 3.10: 2 squared is {square(2)}')
 # the following will work on python 3.11
-try:
-    raise TypeError('bad type')
-except Exception as e:
-    e.add_note('Add some information')
-    raise
-print(f'This will work on python 3.11')
+Ts = TypeVarTuple("Ts")
+print(f'This will work on python 3.11 {Ts}')
 # the following will work on python 3.12
 #print(f'This will work on python 3.12 {x['key1']}')
