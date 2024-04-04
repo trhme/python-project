@@ -1,3 +1,8 @@
+# This script serves as an additional check to see if we have the right version of
+# python installed.  Each sections tries to run a feature that will only work in 
+# the noted version and beyond. The workflow should truncate any sections that are
+# beyond the specified version, and then should run the remaining script without
+# errors.
 # the following will work for python 3.8 and older
 print("This will work on python 3.8 and older")
 
