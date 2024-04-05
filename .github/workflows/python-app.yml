@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
 
 env:
-  PYTHON_VERSION: Monday
+  PYTHON_VERSION: 3.9
 
 permissions:
   contents: read
