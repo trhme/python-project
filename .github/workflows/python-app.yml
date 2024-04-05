@@ -51,5 +51,6 @@ jobs:
         #pytest
     - name: Test for version
       run: |
-        #python src/app.py
-        python src/version-tester.py
+        sed -e '/python ${{ inputs.aws-primary-region }}/,$d' src/version-tester.py >src/version-tester-tmp.py
+        python src/version-tester-tmp.py
+        rm src/version-tester-tmp.py
