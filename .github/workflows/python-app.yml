@@ -27,7 +27,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v5.1.0
       with:
-        python-version: "{{ env.PYTHON_VERSION }}"
+        python-version: "${{ env.PYTHON_VERSION }}"
     - name: Install dependencies
       run: |
         echo "go: $GITHUB_OUTPUT"
@@ -52,6 +52,6 @@ jobs:
         #pytest
     - name: Test for version
       run: |
-        sed -e '/python {{ env.PYTHON_VERSION }}/,$d' src/version-tester.py >src/version-tester-tmp.py
+        sed -e '/python ${{ env.PYTHON_VERSION }}/,$d' src/version-tester.py >src/version-tester-tmp.py
         python src/version-tester-tmp.py
         rm src/version-tester-tmp.py
