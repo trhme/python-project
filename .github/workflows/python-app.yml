@@ -52,7 +52,7 @@ jobs:
           print("good")
         else:
           print(f'mypy version {"$MYPY_INST"} installed, but {"$MYPY_REQD"} reqired!')
-          sys.exit(0)
+          sys.exit(1)
         EOF
     - name: Lint with flake8
       run: |
