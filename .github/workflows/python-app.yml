@@ -40,6 +40,9 @@ jobs:
       run: |
         MYPY_INSTALLED=$(mypy --version |cut -d " " -f 2)
         echo $MYPY_INSTALLED
+        MYPY_MIN="1.0.1"
+        if ((MYPY_INSTALLED)); then
+          echo "MYPY_INSTALLED is ON"
     - name: Lint with flake8
       run: |
         which python
