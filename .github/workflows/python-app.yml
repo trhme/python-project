@@ -40,7 +40,7 @@ jobs:
       run: |
         MYPY_INST=$(mypy --version |cut -d " " -f 2)
         MYPY_INST="$MYPY_INST.0.0"
-        MYPY_REQD="0.900.123.0"
+        MYPY_REQD="1.900.123.0"
         python - <<EOF
         import sys
         print(f'{"$MYPY_INST"} {"$MYPY_REQD"}')
