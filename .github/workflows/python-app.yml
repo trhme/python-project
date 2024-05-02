@@ -43,13 +43,12 @@ jobs:
         MYPY_REQD="1.9.123.0"
         python - <<EOF
         import sys
-        print(f'{"$MYPY_INST"} {"$MYPY_REQD"}')
         inst = '$MYPY_INST'.split('.')
         reqd = '$MYPY_REQD'.split('.')
         inst_val = float(inst[0]) + float(inst[1]) / 1000.0 + float(inst[2]) / 1000000.0
         reqd_val = float(reqd[0]) + float(reqd[1]) / 1000.0 + float(reqd[2]) / 1000000.0
         if inst_val >= reqd_val:
-          print("good")
+          print("mypy version good")
         else:
           print(f'mypy version {"$MYPY_INST"} installed, but {"$MYPY_REQD"} reqired!')
           sys.exit(1)
