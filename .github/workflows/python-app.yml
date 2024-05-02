@@ -38,7 +38,8 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check for min version of mypy
       run: |
-        mypy --version
+        MYPY-INSTALLED=$(mypy --version |cut -d " " -f 2)
+        echo $MYPY-INSTALLED
     - name: Lint with flake8
       run: |
         which python
