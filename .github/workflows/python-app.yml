@@ -38,12 +38,22 @@ jobs:
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check for min version of mypy
       run: |
-        MYPY_INSTALLED=$(mypy --version |cut -d " " -f 2)
-        echo $MYPY_INSTALLED
-        MYPY_MIN="1.0.1"
-        if ((MYPY_INSTALLED)); then
-          echo "MYPY_INSTALLED is ON"
-        fi
+        MYPY_INST=$(mypy --version |cut -d " " -f 2)
+        MYPY_INST="$MYPY_INST.0.0"
+        MYPY_REQD="0.900.123.0"
+        python - <<EOF
+        import sys
+        print(f'{"$MYPY_INST"} {"$MYPY_REQD"}')
+        inst = '$MYPY_INST'.split('.')
+        reqd = '$MYPY_REQD'.split('.')
+        inst_val = float(inst[0]) + float(inst[1]) / 1000.0 + float(inst[2]) / 1000000.0
+        reqd_val = float(reqd[0]) + float(reqd[1]) / 1000.0 + float(reqd[2]) / 1000000.0
+        if inst_val >= reqd_val:
+          print("good")
+        else:
+          print(f'mypy version {"$MYPY_INST"} installed, but {"$MYPY_REQD"} reqired!')
+          sys.exit(0)
+        EOF
     - name: Lint with flake8
       run: |
         which python
