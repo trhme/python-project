@@ -11,6 +11,7 @@ Colons can be used to align columns.
 | [08866](https://fta-curate-trade-data-flex-venv4-hub-bucket-dev-us-east-1.s3.amazonaws.com/raw_trades/2024/4/18/1317408866_2024-04-18T00%3A00%3A00_65c55c21-43ea-49e4-8a6b-a820f55f0f91.json) | CDSIndex | 2                    | BUY   | Sell |
 | [18851](https://fta-curate-trade-data-flex-venv4-hub-bucket-dev-us-east-1.s3.amazonaws.com/raw_trades/2024/3/21/1317318851_2024-03-21T00%3A00%3A00_518c501b-b9a0-45ff-9ce1-502cba495015.json) | CDSIndex | 3                    | SELL  | Buy  |
 | [08867](https://fta-curate-trade-data-flex-venv4-hub-bucket-dev-us-east-1.s3.amazonaws.com/raw_trades/2024/4/12/1317408867_2024-04-12T00%3A00%3A00_4419424f-cf8f-4237-8776-cace95073fa2.json) | CDSIndex | 5                    | SHORT | Sell |
+| [00842](https://fta-curate-trade-data-flex-venv4-hub-bucket-dev-us-east-1.s3.amazonaws.com/raw_trades/2023/5/27/1317400842_2023-05-27T00%3A00%3A00_01886d15-f793-4c38-abd7-d6b3fe8168c1.json) | CDS | 5                    | SHORT | Sell |
 
 There must be at least 3 dashes separating each header cell.
 The outer pipes (|) are optional, and you don't need to make the 
