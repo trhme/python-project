@@ -9,7 +9,7 @@ Colons can be used to align columns.
 | Raw Input     | legTransactionTypeId | Cool  |
 | ------------- |:--------------------:| -----:|
 | 08866         | 2                    | $1600 |
-| ![Alt text](88516 "tester")         | 5                    |   $12 |
+| ![88516]("tester")         | 5                    |   $12 |
 | 08867         | 3                    |    $1 |
 
 There must be at least 3 dashes separating each header cell.
