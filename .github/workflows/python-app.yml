@@ -72,4 +72,4 @@ jobs:
         sed -e '/python ${{ env.PYTHON_VERSION }}/,$d' src/version-tester.py >src/version-tester-tmp.py
         python src/version-tester-tmp.py
         rm src/version-tester-tmp.py
-        python -m pip ls
+        python -m pip list
