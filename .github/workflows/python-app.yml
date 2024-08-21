@@ -28,14 +28,15 @@ jobs:
       uses: actions/setup-python@v5.1.0
       with:
         python-version: "${{ env.PYTHON_VERSION }}"
-    - name: Install dependencies
-      run: |
-        echo "go: $GITHUB_OUTPUT"
-        set
-        python -m pip install --upgrade pip
-        python -m pip install flake8 pytest
-        python -m pip install mypy
-        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+        cache-dependency-path: "requirements.txt"
+#    - name: Install dependencies
+#      run: |
+#        echo "go: $GITHUB_OUTPUT"
+#        set
+#        python -m pip install --upgrade pip
+#        python -m pip install flake8 pytest
+#        python -m pip install mypy
+#        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Check for min version of mypy
       run: |
         MYPY_INST=$(mypy --version |cut -d " " -f 2)
@@ -73,3 +74,4 @@ jobs:
         sed -e '/python ${{ env.PYTHON_VERSION }}/,$d' src/version-tester.py >src/version-tester-tmp.py
         python src/version-tester-tmp.py
         rm src/version-tester-tmp.py
+        python -m pip ls
