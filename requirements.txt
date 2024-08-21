@@ -3,3 +3,4 @@ pytest
 gunicorn
 pandas
 requests
+mypy
